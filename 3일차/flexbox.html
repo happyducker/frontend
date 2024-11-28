@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        section{
+            display: flex; /* flex : 부모 요소에서 입력, 블록요소를 인라인 요소로 변경 */
+            /* block 요소 : 하나의 줄을 전부 차지, <div>, <h1>, <p>, <ul>, <form> */
+            /* inline 요소 : 입력한 내용 만큼만 공간을 차지, <span>, <img>, <strong>, <a> */
+            /* 주측 */
+            justify-content:space-between; /* justify-content : 사이사이 공간배분 */ /* space-between : 양끝을 페이지 끝에 맞추고 배분 */
+            justify-content:space-around; /* space-around : 양끝을 페이지 약간 띄우고 배분 */
+            justify-content:center; /* center : 가운데 정렬 */
+            justify-content:flex-end; /* flex-end : 오른쪽 정렬 */ 
+            /* flexboxfroggy flex를 연습하는 게임 */
+
+            /* 교차축 */
+            flex-direction:column; /* flex-direction: column : 인라인 상태로 세로로 방향전환, row : 가로로 전환, reverse를 붙일시 반대정렬 */
+            align-items:flex-start; /* start : 왼쪽 정렬 */
+            align-items:flex-end; /* end : 오른쪽 정렬 */
+            align-items:center; /* center : 가운데 정렬 */
+            border: 3px solid red;
+            height: 100vh; /* vh : 전체화면(스크롤포함) 비율 높이 */
+            justify-content:space-between; /* 높이가 설정되야 가능함 보조축에서는 사용불가능 */
+
+            
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border:0.1px solid black;
+        }
+        .box1{
+            background-color: aqua;
+        }
+        .box2{
+            background-color: rgb(136, 0, 255);
+        }
+        .box3{
+            background-color: rgb(51, 0, 255);
+        }
+        .box4{
+            background-color: rgb(0, 255, 89);
+        }
+        .box5{
+            background-color: rgb(255, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>flexbox</h1>
+    <section> <!-- section : div와 비슷하지만 시맨틱 태그가 다름 class이름을 쉽게 나누기 위해 사용 -->
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+    </section>
+</body>
+</html>
