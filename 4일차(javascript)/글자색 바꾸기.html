@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자색 바꾸기</title>
+</head>
+<body>
+    <button id="change">글자색 바꾸기</button>
+    <p>글자색을 바꾸기 위해 색이 바뀔 부분</p>
+
+    <script>
+        // 방법1 : 웹 요소를 변수로 지정
+        let changeBtn = document.querySelector("#change") /* document.querySelector("#change") : id="change"로 설정한 button과 연결
+        querySelector : Selector으로 선택해서 changeBtn에 대입 */
+        changeBtn.onclick = changeColor; // onclick : 클릭 되었을때
+        // 기능을 묶어주는 함수
+        function changeColor(){ // ()는 실행을 의미 
+            document.querySelector("p").style.color = "blue" // ("p") : p태그 안 글자를 바꿈
+        }
+
+        // 방법 2 : 웹 요소를 따로 변수로 만들지 않고 사용
+        document.querySelector("#change").onclick = changeColor
+
+        function changeColor(){ // ()는 실행을 의미 
+            document.querySelector("p").style.color = "yellowgreen" // ("p") : p태그 안 글자를 바꿈
+        }
+
+        //방법 3 : 함수를 직접 선언 (함수명 없다.)
+        document.querySelector("#change").onclick = function(){
+            document.querySelector("p").style.color="orange"
+        }
+    </script>
+</body>
+</html>

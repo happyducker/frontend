@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평균 점수</title>
+</head>
+<body>
+    <script>
+        let Korean;
+        let English;
+        let Math;
+
+        Korean = prompt("국어 점수를 입력해주세요.");
+        English = prompt("영어 점수를 입력해주세요.");
+        Math = prompt("수학 점수를 입력해주세요.");
+
+        Korean = Number(Korean);
+        English = Number(English);
+        Math = Number(Math);
+
+        let average = (Korean + English + Math) / 3;
+        document.write("평균 점수는 ? ", average + "점 입니다.<br>");
+
+        if (average >= 90){
+            document.write("A");
+        }
+        else if (average >= 80){
+            document.write("B");
+        }
+        else if (average >= 70){
+            document.write("C");
+        }
+        else if (average < 70){
+            document.write("F");
+        }
+    </script>
+    
+</body>
+</html>
