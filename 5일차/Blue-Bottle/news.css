@@ -1,4 +1,9 @@
 *{margin: 0; padding: 0;}
+body{
+    width: 1100px;
+    /* 위 아래: 0 좌우 : 자동 */
+    margin: 0 auto;
+}
 /* header 시작 */
 header{
     background-color:white;
@@ -25,7 +30,11 @@ a{
     padding: 0 15px; /* padding 뒤 4개가 들어 갈 수 있는데 시계방향 순서로 늘어남 */
 }
 /* main 시작 */
-
+.vid{
+    height: 200px;
+    position:absolute;
+    right: 0.1px;
+}
 /* footer 시작 */
 footer{
     padding: 10px 50px;
