@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plus minus</title>
+    <style>
+        .inText{
+            font-size: 200px;
+            position: absolute;
+            top: 26%;
+            left: 44%;
+        }
+        a{
+            font-size: 50px;
+            text-decoration: none;
+            color: #05097c;
+            position: relative;
+            left: 28%;
+            padding: 100px;
+        }
+        a:hover{color:#01a1dd}
+    </style>
+</head>
+<body>
+    <a href="#" id="btnPlus"> plus </a>
+    <a href="#" id="btnMinus"> minus </a>
+    <div class="inText">0</div>
+
+    <script>
+        let num = 0;
+        // querySelector : 은 .이 필요하다 id를 사용하기 때문에
+        let $inText = document.querySelector(".inText")
+        // getElementById : id로 가져옴
+        // addEventListener : 사용자가 뭔가를 했을때 반응을 추가함
+        // $inText.innerText = num; innerText는 출력 함수
+        const $btnPlus = document.getElementById("btnPlus");
+        $btnPlus.addEventListener("click", e=>{
+            num++
+            $inText.innerText = num;
+        });
+        const $btnMinus = document.getElementById("btnMinus");
+        $btnMinus.addEventListener("click", e=>{
+            num--
+            $inText.innerText = num;
+        });
+    </script>
+</body>
+</html>

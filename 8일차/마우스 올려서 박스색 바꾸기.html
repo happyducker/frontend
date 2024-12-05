@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 올려서 박스색 바꾸기</title>
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(108, 214, 2);
+            position: relative;
+            top: 175px;
+            left: 650px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+
+    <script>
+        let $mouseEnter = document.getElementById('box1');
+        let $mouseLeave = document.getElementById('box1');
+        // let $mouseClick = document.getElementById('box1');
+
+        $mouseEnter.addEventListener("mouseenter", changeColor1);
+
+        function changeColor1(){
+            document.getElementById('box1').style.backgroundColor = "rgb(54, 6, 211)";
+        }
+
+        $mouseLeave.addEventListener("mouseleave", changeColor2);
+
+        function changeColor2(){
+            document.getElementById('box1').style.backgroundColor = "rgb(108, 214, 2)";
+        }
+
+
+
+        
+
+        
+        
+    </script>
+</body>
+</html>

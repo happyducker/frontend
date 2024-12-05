@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전구</title>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <p> 😊onclick 사용</p>
+    <img id="myImg" src="/images/on.png" alt="전구 이미지"> <br>
+
+    <script>
+        let $myImg = document.getElementById("myImg");
+        
+        $myImg.addEventListener("mouseover",changePic1);
+        $myImg.addEventListener("mouseout",changePic2);
+        
+        $lightoff.onclick = changePic1
+        function changePic1(){
+            $myImg.src = "/images/off.png";
+        }
+        $lighton.onclick = changePic2
+        function changePic2(){
+            $myImg.src = "/images/on.png";
+        }
+       
+    </script>
+</body>
+</html>

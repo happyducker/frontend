@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전구</title>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <p> 😊onclick 사용</p>
+    <img id="myImg" src="/images/on.png" alt="전구 이미지"> <br>
+    <button id="onBtn">켜키</button>
+    <button id="offBtn">끄기</button>
+
+    <script>
+        const $lighton = document.getElementById("onBtn");
+        const $lightoff = document.getElementById("offBtn");
+        const $myImg = document.getElementById("myImg");
+        
+        $lighton.onclick = function(){
+            $myImg.src = "/images/on.png";
+        }
+        $lightoff.onclick = function(){
+            $myImg.src = "/images/off.png";
+        }
+    </script>
+</body>
+</html>
